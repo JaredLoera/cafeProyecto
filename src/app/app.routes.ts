@@ -7,6 +7,6 @@ import { TypesComponent } from './pages/types/types.component';
 export const routes: Routes = [
     {path:'', component: HomeComponent},
     {path:'about', component: AboutComponent},
-    {path:'types/:tipo', component: TypesComponent},
+  //  {path:'types/:tipo', component: TypesComponent},
     { path: '**', redirectTo: '' }
 ];
