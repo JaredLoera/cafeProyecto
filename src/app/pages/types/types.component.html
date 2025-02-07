@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+<div class="container">
+    @for (item of tiposDeCafe; track $index) {
+     @if (item.url == tiposDeCafeUrl) {
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h1 class="text-danger fw-bold mt-5">{{item.titulo}}</h1>
+            <p>{{item.descripcion}}</p>
+            <p><strong>Origen:</strong> {{item.origen}}</p>
+            <p><strong>Consumo:</strong> {{item.consumo}}</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                @for (caracteristica of item.caracteristicas; track $index) {
+                <li>{{caracteristica}}</li>
+                }
+            </ul>
+            <p><strong>Curiosidades:</strong> {{item.curiosidades}}</p>
+        </div>
+        <div class="col-md-6 mt-5">
+            <img src="{{item.imagen}}" alt="{{item.titulo}}" class="img-fluid rounded" />
+        </div>
+    </div>
+        }
+    }
+</div>
+<app-footer></app-footer>
